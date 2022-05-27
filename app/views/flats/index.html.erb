@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1>All our flats (<%= @flats.length %>)</h1>
+
+  <div class="d-flex">
+    <% @flats.each do |flat| %>
+      <%= flat.name %>
+      <%= flat.address %>
+      <%= flat.number_of_guests %>
+      <%= flat.price_per_night %>
+      <%= link_to 'More info', flat_path(flat) %>
+    <% end %>
+  </div>
+
+</div>
